@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christine's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Entry popup modal -->
+<div id="site-modal" class="site-modal" aria-hidden="true">
+    <div class="site-modal__backdrop"></div>
+    <div class="site-modal__box" role="dialog" aria-modal="true" aria-labelledby="site-modal-title">
+        <h2 id="site-modal-title">Website still in work</h2>
+        <p>Please excuse me if it's a little rough :D!</p>
+        <div class="site-modal__actions">
+            <button id="site-modal-close" class="btn">Okay</button>
+        </div>
+    </div>
+</div>
+<!-----------header------------>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#passions">Passions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Rotman Commerce '28 | Data Science | Human Geography | Tech & Media</p>
+            <h1>Hi, I'm <span>Christine</span>.<br>Welcome to my website!</h1>
+        </div>
+    </div>
+</div>
+<!-----------about------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I love exploring new perspectives and teaching myself random subjects and skills, 
+                    including video editing, coding, UI/UX design, and different languages. 
+                    Curiosity drives me, and I thrive on challenging myself with new experiences. 
+                    What excites me most is the future of technology—its potential, its impact, 
+                    and how we can use it for the good of people. This vision motivates me to keep 
+                    building skills to contribute meaningfully to tech-driven solutions and media 
+                    innovation. At the intersection of creativity, data, and human impact, 
+                    I am shaping a path toward work that matters.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Graphic Design</span><br>Canva, Photoshop, Illustrator</li>
+                            <li><span>Video Production</span><br>Premiere Pro, After Effects, Capcut</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Consulting</span><br>Student consultant, Consult for Impact<br>
+                            Case Competition Participant, Good & Well x KOTN Impact Challenge | 
+                            RCFTA Finstart Case Competition | Rotman Commerce FLC Case Competition</li>
+                            <li><span>Event Planning</span><br>External Coordinator, EMHS Volunteer Club<br>
+                            Director of Events, VicPride!
+                            (<a href="https://www.instagram.com/vicu.pride?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="white-link">@vicu.pride</a>)</li>
+                            <li><span>Marketing</span><br>Director of Marketing, VCDS Tickless Time 
+                                (<a href="https://www.instagram.com/ticklesstime.vcds?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="white-link">@ticklesstime.vcds</a>)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-2028</span><br>Bachelor of Commerce, University of Toronto<br>
+                            Focus in Data Science and Strategy & Innovation<br>
+                         Minor in Human Geography</li>
+                            <li><span>Cumulative GPA</span><br>3.57</li>
+                            <li><span>Notable Courses</span><br>Microeconomics, Macroeconomics, 
+                                Accounting, Marketing, Operational Management, Computer Programming, 
+                                Organizational Behaviours, Statistics, Geopolitics</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------Passions Section---------->
+<div id="passions">
+    <div class="container">
+        <h1 class="sub-title">My Passions</h1>
+        <p>Learn more about me, my life, and my passion!</p>
+        
+        <div class="passions-grid">
+            <div class="passion-card">
+                <a href="passion-music.html">
+                    <img src="images/emhs band.jpg" alt="Music Passion">
+                    <h3>Music</h3>
+                </a>
+            </div>
+            <div class="passion-card">
+                <a href="passion-volunteering.html">
+                    <img src="images/volunteering.jpg" alt="Volunteering Passion">
+                    <h3>Volunteering</h3>
+                </a>
+            </div>
+            <div class="passion-card">
+                <a href="passion-design.html">
+                    <img src="Media Production Section/TicklessTime_Poster.png" alt="Design Passion">
+                    <h3>Design & Art</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------Contact Section---------->
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Get In Touch</h1>
+        <p>Feel free to reach out! Contact information coming soon.</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
+
+<script>
+// Show the entry modal once per session
+document.addEventListener('DOMContentLoaded', function(){
+    try{
+        var modal = document.getElementById('site-modal');
+        var closeBtn = document.getElementById('site-modal-close');
+        var seen = sessionStorage.getItem('siteModalSeen');
+        if(!seen){
+            modal && modal.setAttribute('aria-hidden','false');
+        }
+        function closeModal(){
+            if(modal){ modal.setAttribute('aria-hidden','true'); }
+            sessionStorage.setItem('siteModalSeen','1');
+        }
+        if(closeBtn) closeBtn.addEventListener('click', closeModal);
+        // allow Esc to close
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+        // click backdrop to close
+        var backdrop = document.querySelector('.site-modal__backdrop');
+        if(backdrop) backdrop.addEventListener('click', closeModal);
+    }catch(e){console.warn(e)}
+});
+</script>

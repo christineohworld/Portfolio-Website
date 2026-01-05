@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteering - Christine's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-----------header------------>
+<div id="header" style="background-image: none; height: auto;">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#passions">Passions</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-----------passion detail------------>
+<div id="passion-detail">
+    <div class="container">
+        <a href="index.html#passions" class="back-link">← Back to Passions</a>
+        
+        <div class="passion-detail-content">
+            <h1>Volunteering</h1>
+            
+            <div class="passion-text">
+                <p>Volunteering is my way of surrounding myself with good people inspiring myself
+                    with the good part of humanity, and also having fun.
+                </p>
+
+                <!-- Volunteer Photo Gallery (moved here) -->
+                <div id="volunteer-gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="volunteering/KakaoTalk_20260101_224835003.jpg" alt="Volunteer photo 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="volunteering/KakaoTalk_20260101_224835003_02.jpg" alt="Volunteer photo 3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="volunteering/KakaoTalk_20260105_033453419.jpg" alt="Volunteer photo 7">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="volunteering/KakaoTalk_20260105_033453419_01.jpg" alt="Volunteer photo 8">
+                        </div>
+                    </div>
+                </div>
+
+                <h2>My Experiences</h2>
+                <p>I've done lots of community service volunteering, including the food bank,
+                    The Salvation Army, Inn from the Cold, Calgary Heritage Park, and more. My
+                    most memorable experience was when I had the honour to organize a birthday party
+                    for children at the Inn from the Cold shelter. This became the foundation of my
+                    goals that whatever I do as a career, I want it to have a positive impact to 
+                    society and the community.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ...existing code... -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
